@@ -2,11 +2,9 @@
   "name": "novash-theme",
   "displayName": "Novash",
   "description": "Novash theme for Visual Studio Code",
+  "license": "Apache-2.0",
   "version": "0.0.1",
   "publisher": "nevir",
-  "engines": {
-    "vscode": "^1.14.0"
-  },
   "categories": [
     "Themes"
   ],
@@ -15,8 +13,22 @@
       {
         "label": "Novash",
         "uiTheme": "vs-dark",
-        "path": "./themes/Novash-color-theme.json"
+        "path": "./dist/theme.json"
       }
     ]
+  },
+  "engines": {
+    "vscode": "^1.14.0"
+  },
+  "scripts": {
+    "compile:src": "./scripts/compile:src.sh",
+    "compile:theme": "./scripts/compile:theme.sh",
+    "compile": "./scripts/compile.sh"
+  },
+  "dependencies": {
+    "typescript": "^2.4.2"
+  },
+  "devDependencies": {
+    "mkdirp": "^0.5.1"
   }
 }
